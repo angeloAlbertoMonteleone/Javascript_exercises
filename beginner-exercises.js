@@ -1,3 +1,5 @@
+{"use strict"};
+
 /* JAVASCRIPT EXERCISE ONLINE
   
 Write a javascript program to check tow numbers and return true if one of the number is 100 or if the sum of the two numbers is 100
@@ -67,6 +69,7 @@ console.log(creatNewString('1234xjnejnjj345'));
 */
 
 
+
 /* Write a javascript program to extract the first half of a string of even length 
 
 
@@ -77,7 +80,124 @@ console.log(firsHalfString('Ciao a tutti'));
 */
 
 
-/* Write a Javascript program to concatenate two strings  */
+/* Write a Javascript program to concatenate two strings 
+
+const concatenation = (str1 , str2) => {
+    let newStr = str1.concat(str2);
+    return newStr;
+}
+console.log(concatenation("Ciao", "Mom"));
+ */
 
 
 
+/* Write a loop that makes seven calls to console.log to output the following
+triangle:
+#
+##
+###
+####
+#####
+######
+#######
+37
+It may be useful to know that you can find the length of a string by writing
+.length after it.
+let abc = "abc";
+console.log(abc.length);
+// → 3 
+
+let str = "#######";
+let count = "";
+for(let i = 0; i < str.length; i++) { 
+    count+= i;
+    console.log(count);
+}*/
+
+
+/* Write a program that uses console.log to print all the numbers from 1 to 100,
+with two exceptions. For numbers divisible by 3, print "Fizz" instead of the
+number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
+When you have that working, modify your program to print "FizzBuzz" for
+numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz"
+for numbers divisible by only one of those).
+(This is actually an interview question that has been claimed to weed out
+a significant percentage of programmer candidates. So if you solved it, your
+labor market value just went up.)
+
+for(let i = 1; i <= 100; i++) {
+    if(i % 3 == 0) {
+        console.log("Fizz")
+    } if (i % 5 == 0) {
+        console.log("Buzz");
+    } if (i % 3 == 0 && i % 5 == 0) {
+        console.log("FizzBuzz");
+    }
+}*/
+
+
+
+/* Write a program that creates a string that represents an 8×8 grid, using newline
+characters to separate lines. At each position of the grid there is either a space
+or a "#" character. The characters should form a chessboard.
+Passing this string to console.log should show something like this:
+# # # #
+ # # # #
+# # # #
+ # # # #
+# # # #
+ # # # #
+# # # #
+ # # # #
+
+When you have a program that generates this pattern, define a binding size
+= 8 and change the program so that it works for any size, outputting a grid
+of the given width and height. */
+/* 
+let size = 8;
+let str = '';
+let stringa = "CiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAnge";
+for(let i = 0; i <= stringa.length; i++) {
+    if(i % 2 == 0 && i % 4 == 0) {
+        console.log(" ");
+    }
+
+    console.log(i);
+}
+ */
+
+/* 
+create a program that makes an array with numbers, and returns the max and min value; */
+/* 
+const maxValue = (arr) => {
+    let max = [];
+    let min;
+        for (let val of arr) {
+          if(val > max)  {
+              max = val;
+          }
+        }
+        for (let val of arr) {
+            if(val > max)  {
+                max = val;
+            }
+        }
+        return max;
+        return min;
+    }
+
+    console.log(maxValue([1,2,3,4,5,6,7]))
+
+
+    const minValue = (arr) =>{
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if(arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+        console.log(minValue([4,1,2,5,3,5,0,7]))
+    */
