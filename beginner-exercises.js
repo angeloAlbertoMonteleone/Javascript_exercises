@@ -168,10 +168,9 @@ for(let i = 0; i <= stringa.length; i++) {
 
 /* 
 create a program that makes an array with numbers, and returns the max and min value; */
-/* 
+/* */
 const maxValue = (arr) => {
     let max = [];
-    let min;
         for (let val of arr) {
           if(val > max)  {
               max = val;
@@ -183,7 +182,7 @@ const maxValue = (arr) => {
             }
         }
         return max;
-        return min;
+
     }
 
     console.log(maxValue([1,2,3,4,5,6,7]))
@@ -200,4 +199,4 @@ const maxValue = (arr) => {
     }
 
         console.log(minValue([4,1,2,5,3,5,0,7]))
-    */
+    
