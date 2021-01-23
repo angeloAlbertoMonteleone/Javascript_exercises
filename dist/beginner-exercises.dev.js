@@ -106,10 +106,10 @@ let abc = "abc";
 console.log(abc.length);
 // → 3 
 
-let str = "#######";
+let str = "#";
 let count = "";
 for(let i = 0; i < str.length; i++) { 
-    count+= i;
+    count += str;
     console.log(count);
 }*/
 
@@ -130,6 +130,8 @@ for(let i = 1; i <= 100; i++) {
         console.log("Buzz");
     } if (i % 3 == 0 && i % 5 == 0) {
         console.log("FizzBuzz");
+    }else {
+        console.log(i);
     }
 }*/
 
@@ -148,97 +150,74 @@ Passing this string to console.log should show something like this:
 
 When you have a program that generates this pattern, define a binding size
 = 8 and change the program so that it works for any size, outputting a grid
-of the given width and height. */
+of the given width and height.
+
+let vuoto = '';
+let canc = '#';
+let spazio = ' ';
+let aCapo = '\n';
+let str = 8*8;
+let bool = false;
+
+for(let i = 1; i < str; i++) {
+    if(i % 2 == 0) {
+        if(!bool) {
+            vuoto+= canc;
+        } else {
+            vuoto+= spazio;
+        }
+    } else if (i % 8 == 0) {
+        vuoto+= aCapo;
+    }
+    }
+    console.log(vuoto); */
+// let stringa = "CiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAnge";
 
 /* 
-let size = 8;
-let str = '';
-let stringa = "CiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAnge";
-for(let i = 0; i <= stringa.length; i++) {
-    if(i % 2 == 0 && i % 4 == 0) {
-        console.log(" ");
-    }
+create a program that makes an array with numbers, and returns the max and min value;
 
-    console.log(i);
+const maxValue = (arr) => {
+    let max = [];
+        for (let val of arr) {
+          if(val > max)  {
+              max = val;
+          }
+        }
+        for (let val of arr) {
+            if(val > max)  {
+                max = val;
+            }
+        }
+        return max;
+
+    }
+    console.log(maxValue([1,2,3,4,5,6,7]))
+
+    const minValue = (arr) =>{
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if(arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+        console.log(minValue([4,1,2,5,3,5,0,7]))  */
+// let total = 0, count = 1;
+//     while (count <= 10) {
+//     total += count;
+//     count += 1;
+//     }
+// console.log(total);
+
+/*     Minimum
+The previous chapter introduced the standard function Math.min that returns
+its smallest argument. We can build something like that now. Write a function
+min that takes two arguments and returns their minimum.
+
+const min = (arg1,arg2) => {
+    let minResult = Math.min(arg1, arg2);
+    return minResult;
 }
- */
 
-/* 
-create a program that makes an array with numbers, and returns the max and min value; */
-
-/* */
-
-var maxValue = function maxValue(arr) {
-  var max = [];
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = arr[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var val = _step.value;
-
-      if (val > max) {
-        max = val;
-      }
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-        _iterator["return"]();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-
-  var _iteratorNormalCompletion2 = true;
-  var _didIteratorError2 = false;
-  var _iteratorError2 = undefined;
-
-  try {
-    for (var _iterator2 = arr[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-      var _val = _step2.value;
-
-      if (_val > max) {
-        max = _val;
-      }
-    }
-  } catch (err) {
-    _didIteratorError2 = true;
-    _iteratorError2 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
-        _iterator2["return"]();
-      }
-    } finally {
-      if (_didIteratorError2) {
-        throw _iteratorError2;
-      }
-    }
-  }
-
-  return max;
-};
-
-console.log(maxValue([1, 2, 3, 4, 5, 6, 7]));
-
-var minValue = function minValue(arr) {
-  var min = arr[0];
-
-  for (var i = 1; i < arr.length; i++) {
-    if (arr[i] < min) {
-      min = arr[i];
-    }
-  }
-
-  return min;
-};
-
-console.log(minValue([4, 1, 2, 5, 3, 5, 0, 7]));
+console.log(min(5,2));*/
