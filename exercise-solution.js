@@ -99,3 +99,5 @@ Altrimenti, stampa “ La popolazione dell’italia è di {numero-differenza}mil
 // console.log("123" < 57); // false
 // console.log(5 + 6 + "4" + 9 - 4 - 2); // 1143
 
+
+

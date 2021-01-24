@@ -64,7 +64,6 @@ console.log(changeString('New! Offer'));
 
 Write a Javascript program to create a new string from a given string taking the first 3 characters and the last 3 characters of a string and adding them togheter. Thre string length must be 3 or more, if not, the orginal string is returned.
 
-
 const creatNewString = str => 
     str.length < 3 ? str : str.slice(0,3) + str.slice(-3);
 console.log(creatNewString('Ciaoatutti'));
@@ -73,7 +72,6 @@ console.log(creatNewString('1234xjnejnjj345'));
 */
 
 /* Write a javascript program to extract the first half of a string of even length 
-
 
 const firsHalfString = (str) => str.slice(0, str.length / 2);
 console.log(firsHalfString('Stringa'));
@@ -135,47 +133,8 @@ for(let i = 1; i <= 100; i++) {
     }
 }*/
 
-/* Write a program that creates a string that represents an 8×8 grid, using newline
-characters to separate lines. At each position of the grid there is either a space
-or a "#" character. The characters should form a chessboard.
-Passing this string to console.log should show something like this:
-# # # #
- # # # #
-# # # #
- # # # #
-# # # #
- # # # #
-# # # #
- # # # #
-
-When you have a program that generates this pattern, define a binding size
-= 8 and change the program so that it works for any size, outputting a grid
-of the given width and height.
-
-let vuoto = '';
-let canc = '#';
-let spazio = ' ';
-let aCapo = '\n';
-let str = 8*8;
-let bool = false;
-
-for(let i = 1; i < str; i++) {
-    if(i % 2 == 0) {
-        if(!bool) {
-            vuoto+= canc;
-        } else {
-            vuoto+= spazio;
-        }
-    } else if (i % 8 == 0) {
-        vuoto+= aCapo;
-    }
-    }
-    console.log(vuoto); */
-// let stringa = "CiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAngeCiaoAnge";
-
 /* 
 create a program that makes an array with numbers, and returns the max and min value;
-
 const maxValue = (arr) => {
     let max = [];
         for (let val of arr) {
@@ -203,12 +162,6 @@ const maxValue = (arr) => {
         return min;
     }
         console.log(minValue([4,1,2,5,3,5,0,7]))  */
-// let total = 0, count = 1;
-//     while (count <= 10) {
-//     total += count;
-//     count += 1;
-//     }
-// console.log(total);
 
 /*     Minimum
 The previous chapter introduced the standard function Math.min that returns
@@ -219,5 +172,106 @@ const min = (arg1,arg2) => {
     let minResult = Math.min(arg1, arg2);
     return minResult;
 }
-
 console.log(min(5,2));*/
+
+/* Define a recursive function isEven corresponding to this description. The
+function should accept a single parameter (a positive, whole number) and return
+a Boolean.
+Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a
+way to fix this? 
+
+function isEven(num) {
+    if (num == 0) {
+        return true;
+    } else if (num == 1) {
+        return false;
+    }
+    else if (num < 0) {
+        return isEven(-num);
+    }
+    else {
+        return isEven(num - 2);
+    }
+  }
+  console.log(isEven(50));
+  console.log(isEven(75));
+  console.log(isEven(-1));
+ */
+
+/* You can get the Nth character, or letter, from a string by writing "string"[N].
+The returned value will be a string containing only one character (for example,
+"b"). The first character has position 0, which causes the last one to be found at
+position string.length - 1. In other words, a two-character string has length
+2, and its characters have positions 0 and 1.
+Write a function countBs that takes a string as its only argument and returns
+a number that indicates how many uppercase “B” characters there are in the
+string.
+Next, write a function called countChar that behaves like countBs, except
+it takes a second argument that indicates the character that is to be counted
+(rather than counting only uppercase “B” characters). Rewrite countBs to
+make use of this new function. */
+
+var string = "ciAo sono AngelO";
+
+function countBs(str) {
+  var countUpp = 0;
+  var newStr = '';
+
+  for (var i = 0; i < str.length; i++) {
+    if (str.charAt(i) == str.charAt(i).toUpperCase() && str.charAt(i) !== ' ') {
+      countUpp += str.charAt(i).length;
+    }
+  }
+
+  return countUpp;
+}
+
+function countChar(str2) {
+  ;
+  var countChar = '';
+
+  for (var j = 0; j < str2.length; j++) {
+    countChar += str2.charAt(j);
+  }
+
+  return countChar;
+}
+
+console.log(countBs(string), countChar(string));
+/* We want to write a program that prints two numbers: the numbers of cows
+and chickens on a farm, with the words Cows and Chickens after them and zeros
+padded before both numbers so that they are always three digits long.
+007 Cows
+011 Chickens
+This asks for a function of two arguments—the number of cows and the
+number of chickens. Let’s get coding.
+
+EXAMPLE 1
+function printFarmInventory(cows, chickens) {
+let cowString = String(cows);
+while (cowString.length < 3) {
+cowString = "0" + cowString;
+}
+console.log(`${cowString} Cows`);
+let chickenString = String(chickens);
+while (chickenString.length < 3) {
+chickenString = "0" + chickenString;
+}
+console.log(`${chickenString} Chickens`);
+}
+
+EXAMPLE 2
+function zeroPad(number, width) {
+    let string = String(number);
+    while (string.length < width) {
+    string = "0" + string;
+    }
+    return string;
+    }
+    function printFarmInventory(cows, chickens, pigs) {
+    console.log(`${zeroPad(cows, 3)} Cows`);
+    console.log(`${zeroPad(chickens, 3)} Chickens`);
+    console.log(`${zeroPad(pigs, 3)} Pigs`);
+    }
+    printFarmInventory(7, 16, 3);
+*/
